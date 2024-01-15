@@ -79,3 +79,4 @@ logic.displayCars(logic.getCars());
 
 availability.addEventListener("click", () => logic.deleteCar());
 availability.addEventListener("change", (event) => logic.availableCars(event));
+sortOptions.addEventListener("change", (event) => logic.sortCars(event));
