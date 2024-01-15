@@ -6,7 +6,7 @@ const availability = document.querySelector(".availability");
 class LogicCars {
   constructor(data) {
     this.cars = [...data];
-    this.filteredCars = [...this.cars];
+    this.filteredCars = [...this.cars]; 
   }
 
   displayCars(elementCars) {
@@ -42,3 +42,18 @@ class LogicCars {
     });
   }
 }
+
+  sortCars(event) {
+    const sortingFunctions = {
+      az: (a, b) => a.name.localeCompare(b.name),
+      za: (a, b) => b.name.localeCompare(a.name),
+      low: (a, b) => a.price - b.price,
+      high: (a, b) => b.price - a.price,
+    };
+    const sortingFunction = sortingFunctions[event.target.value];
+    if (sortingFunction) {
+      this.filteredCars.sort(sortingFunction);
+      this.displayCars(this.filteredCars);
+    }
+  }
+
