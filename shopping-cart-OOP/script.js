@@ -6,7 +6,7 @@ const availability = document.querySelector(".availability");
 class LogicCars {
   constructor(data) {
     this.cars = [...data];
-    this.filteredCars = [...this.cars]; 
+    this.filteredCars = [...this.cars]; // Fix: Use this.cars instead of cars
   }
 
   displayCars(elementCars) {
@@ -41,7 +41,6 @@ class LogicCars {
       car.appendChild(cars);
     });
   }
-}
 
   sortCars(event) {
     const sortingFunctions = {
@@ -57,3 +56,18 @@ class LogicCars {
     }
   }
 
+  availableCars(event) {
+    const [key, value] = event.target.value.split("-");
+    console.log(key, value);
+    this.filteredCars = [...this.cars]; // Fix: Use this.cars instead of cars
+    this.filteredCars = this.filteredCars.filter(
+      (element) => element[key] === value
+    );
+    this.displayCars(this.filteredCars);
+  }
+
+  deleteCar(id) {
+    this.filteredCars = this.filteredCars.filter((el) => el.id !== id);
+    this.displayCars(this.filteredCars);
+  }
+}
