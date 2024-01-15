@@ -6,7 +6,7 @@ const availability = document.querySelector(".availability");
 class LogicCars {
   constructor(data) {
     this.cars = [...data];
-    this.filteredCars = [...this.cars]; // Fix: Use this.cars instead of cars
+    this.filteredCars = [...this.cars];
   }
 
   displayCars(elementCars) {
@@ -59,7 +59,7 @@ class LogicCars {
   availableCars(event) {
     const [key, value] = event.target.value.split("-");
     console.log(key, value);
-    this.filteredCars = [...this.cars]; // Fix: Use this.cars instead of cars
+    this.filteredCars = [...this.cars];
     this.filteredCars = this.filteredCars.filter(
       (element) => element[key] === value
     );
