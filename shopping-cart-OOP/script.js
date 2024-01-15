@@ -73,3 +73,6 @@ class LogicCars {
 
   getCars = () => this.filteredCars;
 }
+
+const logic = new LogicCars(data);
+logic.displayCars(logic.getCars());
