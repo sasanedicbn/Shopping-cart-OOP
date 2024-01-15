@@ -70,4 +70,6 @@ class LogicCars {
     this.filteredCars = this.filteredCars.filter((el) => el.id !== id);
     this.displayCars(this.filteredCars);
   }
+
+  getCars = () => this.filteredCars;
 }
