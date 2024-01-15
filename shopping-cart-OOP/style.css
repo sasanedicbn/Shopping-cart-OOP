@@ -43,4 +43,43 @@
   main{
     background-color: rgb(236, 236, 236);
   }
- 
+  .car{
+    height: 100vh;
+    scroll-snap-type: y mandatory; 
+    overflow-y: scroll; 
+  }
+  
+  .select-container{
+    background-color: rgb(77, 74, 74);
+    display: flex;
+    justify-content: flex-end;
+    padding: 10px;
+  }
+  label{
+    color: white;
+    margin-top: 8px;
+    font-size: 18px;
+    margin-right: 5px;
+    margin-left: 8px;
+  }
+  select {
+    padding: 8px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    cursor: pointer;
+  }
+  
+  option {
+    padding: 8px;
+    font-size: 14px;
+    background-color: #fff;
+    color: #333;
+  }
+  .deleteCar{
+    background-color: rgb(214, 42, 42);
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+  }
